@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: win-svc-single
+spec:
+ rules:
+ - host: site.com
+ http:
+ paths:
+ - path: /
+ backend:
+ serviceName: win-webserver
+ servicePort: 80
+ 
